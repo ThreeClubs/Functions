@@ -99,28 +99,30 @@ console.log(truthyOrFalsy("string"));
 
 // Why does null, undefined, and NaN return as true?
 
-// use the logical NOT (!) operator 
+/// if (someVariable) {} else {} will return boolean truth/falsy values
 
- let myArray = ["", "string", 0, 1, null, NaN, undefined] 
+// you can use the logical ! operator and reverse the if else if you want, both work
 
-for (i = 0; i < myArray.length; i++) {
- if (!myArray[i]) {
-   console.log(`${myArray[i]} is falsy ⛔️`);
-} else {
-  console.log(`${myArray[i]} is truthy ✅`);
- }
-}
+let myArray = ["", "string", 0, 1, null, NaN, undefined];
+
+  for (i = 0; i < myArray.length; i++) {
+    if (myArray[i]) {
+      console.log(`${myArray[i]} is truthy ✅`);
+    } else {
+      console.log(`${myArray[i]} is falsy ⛔️`);
+    }
+  }
 
 
 // tutor answer
 
 function isStringEmpty(string) {
-    const stringToCheck = string;
-    if (stringToCheck === "") {
-        return true;
-    } else {
-        return false;
-    }
+  const stringToCheck = string;
+  if (stringToCheck === "") {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 console.log(isStringEmpty("Hi"));
@@ -133,36 +135,35 @@ console.log(isStringEmpty(""));
 // a function can be named after it's assigned key as part of an object property
 
 const person = {
-    firstName: "John",
-    lastName: "Rosser",
-    greeting(name) {
-        console.log(`Hi ${name}!`)
-    }
-}
+  firstName: "John",
+  lastName: "Rosser",
+  greeting(name) {
+    console.log(`Hi ${name}!`);
+  },
+};
 
-person.greeting("Max") // we can then pass in a string as an argument using . method
+person.greeting("Max"); // we can then pass in a string as an argument using . method
 
-person.greeting(person.firstName) //or we can call a property from the object and pass it in
+person.greeting(person.firstName); //or we can call a property from the object and pass it in
 // using . method twice
 
 //// hard exercise coming ////
 
-
 function halfNumber(num) {
-    let halvedNumber = num/2
- return halvedNumber
+  let halvedNumber = num / 2;
+  return halvedNumber;
 }
 
-let num = 4
+let num = 4;
 
 console.log(`Half of ${num} is ${halfNumber(num)}`);
 
 function timeInSeconds(minutes) {
-    const seconds = minutes*60;
-    return seconds
+  const seconds = minutes * 60;
+  return seconds;
 }
 
-// let minutes = window.parseInt(prompt("Enter in your time in minutes", "")) // parseInt will 
+// let minutes = window.parseInt(prompt("Enter in your time in minutes", "")) // parseInt will
 // convert a string containing a number into a number (the first number is comes across)
 
 // alert(`${minutes} minutes is ${timeInSeconds(minutes)} seconds`);
@@ -172,23 +173,8 @@ function timeInSeconds(minutes) {
 // }
 
 console.log("Good MORNING".toLowerCase()); // makes string lower case
-const myString = "            GoOd MORninG" 
+const myString = "            GoOd MORninG";
 console.log(myString.toUpperCase()); // all to upper case
 console.log(myString.trim()); // gets rids of spaces around string
 
 // prompts() instructs browser to display a dialog prompting the user to input some text
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
