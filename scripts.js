@@ -99,6 +99,19 @@ console.log(truthyOrFalsy("string"));
 
 // Why does null, undefined, and NaN return as true?
 
+// use the logical NOT (!) operator 
+
+ let myArray = ["", "string", 0, 1, null, NaN, undefined] 
+
+for (i = 0; i < myArray.length; i++) {
+ if (!myArray[i]) {
+   console.log(`${myArray[i]} is falsy ⛔️`);
+} else {
+  console.log(`${myArray[i]} is truthy ✅`);
+ }
+}
+
+
 // tutor answer
 
 function isStringEmpty(string) {
@@ -149,10 +162,10 @@ function timeInSeconds(minutes) {
     return seconds
 }
 
-let minutes = window.parseInt(prompt("Enter in your time in minutes", "")) // parseInt will 
+// let minutes = window.parseInt(prompt("Enter in your time in minutes", "")) // parseInt will 
 // convert a string containing a number into a number (the first number is comes across)
 
-alert(`${minutes} minutes is ${timeInSeconds(minutes)} seconds`);
+// alert(`${minutes} minutes is ${timeInSeconds(minutes)} seconds`);
 
 // function timeInSeconds(timeInMinutes) { // Guillermo Domber method
 //   return console.log(`${timeInMinutes} minutes is ${timeInMinutes*60} seconds`);
