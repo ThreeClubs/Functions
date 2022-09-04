@@ -142,6 +142,8 @@ const person = {
   },
 };
 
+//String Methods intro
+
 person.greeting("Max"); // we can then pass in a string as an argument using . method
 
 person.greeting(person.firstName); //or we can call a property from the object and pass it in
@@ -171,6 +173,8 @@ function timeInSeconds(minutes) {
 // function timeInSeconds(timeInMinutes) { // Guillermo Domber method
 //   return console.log(`${timeInMinutes} minutes is ${timeInMinutes*60} seconds`);
 // }
+
+// More STRING METHODS
 
 console.log("Good MORNING".toLowerCase()); // makes string lower case
 const myString = "            GoOd MORninG";
